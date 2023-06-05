@@ -1,14 +1,19 @@
 import React from 'react';
-import TrainBookingForm from './components/Train'
-import Footer from './footer';
+import { Routes, Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import EpicTransitForm from './components/Train'
+import Footer from './components/footer';
 
 const App = () => {
   return (
-    <div>
-      <TrainBookingForm />
-      <Footer />
-    </div>
-  );
+      <>
+        <Navbar />
+        <Routes>  
+          <Route path="/booking" element={< EpicTransitForm />} />
+        </Routes>
+        <Footer />
+      </>
+  );    
 };
 
 export default App;
