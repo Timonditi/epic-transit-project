@@ -1,11 +1,12 @@
 import React from 'react';
-import TrainBookingForm from './components/Train';
+import TrainBookingForm from './components/Train'
+import Footer from './footer';
 
 const App = () => {
   return (
     <div>
-      <h1>Epic Transit</h1>
       <TrainBookingForm />
+      <Footer />
     </div>
   );
 };
