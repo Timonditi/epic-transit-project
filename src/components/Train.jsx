@@ -27,8 +27,11 @@ const EpicTransitForm = () => {
     };
   
   return (
-    <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG1CKvNnIgWD5Gxu48fTM_5zJ97_n-VF_y7g&usqp=CAU" alt="" />
+    <>
+      <div className='head'> 
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjhbEL1bN18Xf0PAzzGBJfoX7c7OZkG_0GVA&usqp=CAU" alt="" />
+      </div>
+      <div className='form'>
       <form>
         <p>Book affordable buses and train</p>
         <label>
@@ -50,12 +53,14 @@ const EpicTransitForm = () => {
           Search
         </button>
       </form>
-      <div>
+      </div>
+      <div className='imagecont'>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVAO5-TZXcHl_Sqm0mDA2h9riRc0Ao6a7GXqRRIvX7Kg-Q0GSN" alt="" />
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHjtRmNe_J4R3SnYiPF3tQkm-bsbC2qhwyQ7vsxL3G8tTb-k1z" alt="" />
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTbXftOGLqUZYPYO-ZBUW6VIyz0sNXVXk5jA&usqp=CAU" alt="" />
       </div>
-    </div>
+    
+    </>
   );
 };
 
