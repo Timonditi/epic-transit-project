@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 function App () {
     return (
         <div>
-            <h1>WELCOME TO EPIC TRANSIT</h1>
+            <h1>EPIC TRANSIT</h1>
             <HomePage />
             <Bus />
             <Footer />

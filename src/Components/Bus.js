@@ -35,7 +35,7 @@ const EpicTransitForm1 = () => {
        
         <div>
           <form>
-            <p>Book affordable buses and trains</p>
+            <p><h3>Book affordable buses and trains</h3></p>
             <div>
               <label>
                 From:
@@ -64,13 +64,13 @@ const EpicTransitForm1 = () => {
       
        <h2>TOP DESTINATIONS</h2>
           <div className='imageContainer'>
-            <img src="https://lh3.googleusercontent.com/muS2fOaml2K5AYU9mBtpIvb3PiIqB6E3wMR_onRU_PGUD71yD6EakBVSh9rhQ5niVoBpfe7BMcsnwIceidv7p8aKxWGxKoAO5QRFZtvS8HY=s1200" alt="" />
+            <img src="https://lh3.googleusercontent.com/muS2fOaml2K5AYU9mBtpIvb3PiIqB6E3wMR_onRU_PGUD71yD6EakBVSh9rhQ5niVoBpfe7BMcsnwIceidv7p8aKxWGxKoAO5QRFZtvS8HY=s1200" alt="Nairobi" />
         
          
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/43/d8/75/standard-operation.jpg?w=1200&h=900&s=1" alt="" />
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/43/d8/75/standard-operation.jpg?w=1200&h=900&s=1" alt="Kisumu" />
           
           
-            <img src="https://www.wiomsa.org/wp-content/uploads/2019/03/Screenshot-2019-03-11-at-16.17.42.png" alt="" />
+            <img src="https://www.wiomsa.org/wp-content/uploads/2019/03/Screenshot-2019-03-11-at-16.17.42.png" alt="Mombasa" />
           
         </div>
     </>

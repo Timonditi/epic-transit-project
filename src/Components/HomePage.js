@@ -3,7 +3,7 @@ import React from "react";
 function HomePage() {
     return (
         <div className="homePage">
-            <h2>EPIC TRANSIT</h2>
+            <h2>Welcome to our online ticketing</h2>
         </div>
     );
 }
