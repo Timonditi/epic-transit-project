@@ -6,6 +6,9 @@ h1 {
     font-weight: 700;
     font-style: oblique;
   }
+  h2 { 
+    text-align: center;
+  }
   .navbar-list {
     list-style-type: none;
     display: flex;
