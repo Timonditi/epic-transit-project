@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect}  from 'react';
 import { Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import EpicTransitForm from './components/Train'
@@ -8,6 +8,16 @@ import Bus from './components/Bus';
 import HomePage from './components/HomePage';
 
 const App = () => {
+  const[data, setData] =  useState([]) 
+  console.log(data);
+
+// fetching data
+useEffect(() => {
+  fetch("http://localhost:9292/buses")
+  .then((r) => r.json())
+  .then ((data) => setData(data))
+}, [])
+
   return (
       <>
         <Navbar />
