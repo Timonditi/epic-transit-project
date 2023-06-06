@@ -1,3 +1,5 @@
+
+
 import './App.css';
 import HomePage from './Components/HomePage';
 import Bus from './Components/Bus';
@@ -17,10 +19,6 @@ function App () {
 
 export default App;
 
-
-
-
-
-
-
-
+  
+  
+  
