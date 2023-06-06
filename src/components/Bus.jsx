@@ -31,6 +31,9 @@ const EpicTransitForm1 = () => {
      <>
         <div className='header'>
           <img src="https://lh3.googleusercontent.com/xh4AQGRJousi2VKiziju9pRvBkFASMloocZBSuvY8bhP6guqLOeR7tFVOdfgBLxjNmNxnPHGdBmoXchc6aqvzXOYGllX43ccc1cz8PTCng=s1200" alt="" />
+          <div className="text-overlay">
+         <h2>Discover the beauty of Kenya and make great memories with us</h2>
+  </div>
         </div>
        
         <div>

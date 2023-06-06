@@ -126,6 +126,18 @@ h1 {
   height: 900px;
   max-height: 350px;
 }
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+}
+
 
 .imageContainer {
   display: flex;
@@ -209,4 +221,8 @@ h1 {
   background-color: #929ca7;
   margin-left: -8px;
   margin-right: -8px;
+}
+.homePage {
+  background-color:#929ca7 ;
+  text-align: center;
 }
