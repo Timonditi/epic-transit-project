@@ -127,13 +127,10 @@ h1 {
   display: block;
   padding: 5px;
   
-  
-  
-  
 }
 .text-overlay {
   position: absolute;
-  /* top: 50%; */
+  top: 50%; 
   left: 50%;
   bottom:10%;
   transform: translate(-50%, -50%);
@@ -171,15 +168,13 @@ h1 {
 }
 
 .form {
-  background: ;
   margin: 60px auto;
   max-width: 700px;
   padding: 0 20px;
-  background-color: #f4f4f4;
-    /* Added background color */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    /* Added drop shadow effect */
+  background-color: #f4f4f4;    
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 .form label {
   margin-bottom: 5px;
   font-weight: bold;
