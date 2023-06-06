@@ -29,7 +29,7 @@ const EpicTransitForm = () => {
   return (
     <>
       <div className='head'> 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjhbEL1bN18Xf0PAzzGBJfoX7c7OZkG_0GVA&usqp=CAU" alt="" />
+        <img src="https://www.brookings.edu/wp-content/uploads/2017/06/train_kenya001.jpg" alt="" />
       </div>
       <div className='form'>
       <form>

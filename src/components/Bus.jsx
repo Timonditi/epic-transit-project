@@ -30,13 +30,13 @@ const EpicTransitForm1 = () => {
     return (
      <>
         <div className='header'>
-          <img src="https://lh3.googleusercontent.com/xh4AQGRJousi2VKiziju9pRvBkFASMloocZBSuvY8bhP6guqLOeR7tFVOdfgBLxjNmNxnPHGdBmoXchc6aqvzXOYGllX43ccc1cz8PTCng=s1200" alt="" />
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/0f/12/6e/ragati-conservancy-mt.jpg?w=1200&h=-1&s=1" alt="" />
           <div className="text-overlay">
          <h2>Discover the beauty of Kenya and make great memories with us</h2>
   </div>
         </div>
        
-        <div>
+        <div className='form'> 
           <form>
             <p><h3>Book affordable buses and trains</h3></p>
             <div>
@@ -68,6 +68,7 @@ const EpicTransitForm1 = () => {
        <h2>TOP DESTINATIONS</h2>
           <div className='imageContainer'>
             <img src="https://lh3.googleusercontent.com/muS2fOaml2K5AYU9mBtpIvb3PiIqB6E3wMR_onRU_PGUD71yD6EakBVSh9rhQ5niVoBpfe7BMcsnwIceidv7p8aKxWGxKoAO5QRFZtvS8HY=s1200" alt="Nairobi" />
+       
         
          
             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/43/d8/75/standard-operation.jpg?w=1200&h=900&s=1" alt="Kisumu" />
@@ -81,4 +82,15 @@ const EpicTransitForm1 = () => {
     );
 };
 
+
 export default EpicTransitForm1;
+  
+
+
+
+
+
+
+
+
+

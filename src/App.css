@@ -55,6 +55,7 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
+    align-self: center;
   }
   
   .header {
@@ -123,18 +124,23 @@ h1 {
 
 .head img {
   width: 100%;
-  height: 900px;
-  max-height: 350px;
+  height: 400px;
+  display: block;
+  padding: 5px;
+  
+  
+  
+  
 }
 .text-overlay {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   left: 50%;
+  bottom:10%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;;
   padding: 10px;
-  color: white;
+  color:#fff;
   font-size: 24px;
 }
 
@@ -166,46 +172,52 @@ h1 {
 }
 
 .form {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-left: 0px;
+  background: ;
+  margin: 60px auto;
+  max-width: 700px;
+  padding: 0 20px;
+  background-color: #f4f4f4;
+    /* Added background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    /* Added drop shadow effect */
 }
-
-.form form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.form p {
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-  background-color: #007bff;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .form label {
   margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  /* Added text color */
 }
 
 .form input[type="text"],
 .form input[type="date"] {
-  padding: 8px;
-  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 .form button {
+  display: block;
+  margin: 0 auto;
   padding: 10px;
   background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+}
+.form p {
+  margin: 0;
+    /* Remove margin */
+    padding: 10px;
+    /* Added padding */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px;
   border-radius: 5px;
 }
 
@@ -225,4 +237,28 @@ h1 {
 .homePage {
   background-color:#929ca7 ;
   text-align: center;
+}
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageWrapper {
+  text-align: center;
+  flex-basis: 30%;
+}
+
+.imageCaption {
+  margin-top: 10px;
+}
+.image1 {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  bottom:30%;
+  transform: translate(-50%, -50%);
+  text-align: center;;
+  padding: 10px;
+  color:black;
+  font-size: 24px;
 }
