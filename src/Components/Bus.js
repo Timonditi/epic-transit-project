@@ -32,7 +32,7 @@ const EpicTransitForm1 = () => {
         <div className='header'>
           <img src="https://lh3.googleusercontent.com/xh4AQGRJousi2VKiziju9pRvBkFASMloocZBSuvY8bhP6guqLOeR7tFVOdfgBLxjNmNxnPHGdBmoXchc6aqvzXOYGllX43ccc1cz8PTCng=s1200" alt="" />
         </div>
-        
+       
         <div>
           <form>
             <p>Book affordable buses and trains</p>
@@ -62,7 +62,7 @@ const EpicTransitForm1 = () => {
           </form>
         </div>
       
-       
+       <h2>TOP DESTINATIONS</h2>
           <div className='imageContainer'>
             <img src="https://lh3.googleusercontent.com/muS2fOaml2K5AYU9mBtpIvb3PiIqB6E3wMR_onRU_PGUD71yD6EakBVSh9rhQ5niVoBpfe7BMcsnwIceidv7p8aKxWGxKoAO5QRFZtvS8HY=s1200" alt="" />
         
