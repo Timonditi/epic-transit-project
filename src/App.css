@@ -1,3 +1,4 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 h1 {
     text-align: center;
     margin-top: 20px;
@@ -60,6 +61,27 @@ h1 {
     justify-content: space-between;
     margin-top: 20px;
   }
+
+  .App {
+    text-align: center;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: #333;
+    margin-right: 10px;
+    font-size: 59px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+ 
+  
   
   
   

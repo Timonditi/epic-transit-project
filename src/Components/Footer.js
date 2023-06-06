@@ -4,7 +4,14 @@ const Footer = () => {
   return (
     <footer>
       <div className='about'>
-       
+    <p> <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-facebook"></i>
+        </a>
+       <p> <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-twitter"></i>
+        </a>
+       </p>
+       </p>
         <p><h3>About Us</h3>
         <p>
           Epic Adventures provides an online ticket booking system

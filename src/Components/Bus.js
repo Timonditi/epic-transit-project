@@ -73,6 +73,7 @@ const EpicTransitForm1 = () => {
             <img src="https://www.wiomsa.org/wp-content/uploads/2019/03/Screenshot-2019-03-11-at-16.17.42.png" alt="Mombasa" />
           
         </div>
+        
     </>
     );
 };
