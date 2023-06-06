@@ -4,6 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className='about'>
+        
     <p> <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-facebook"></i>
         </a>

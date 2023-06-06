@@ -56,10 +56,19 @@ h1 {
     background-color: #007bff;
     text-align: center;
   }
-  .about{
+  /* .about{
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 20px; */
+  /* } */
+  .about {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .about > * {
+    flex: 1;
+    margin: 0 10px;
   }
 
   .App {
