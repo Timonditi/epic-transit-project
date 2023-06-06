@@ -6,10 +6,10 @@ const Footer = () => {
       <div className='about'>
         
     <p> <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-facebook"></i>
+          <i className="fab fa-facebook fa-4x"></i>
         </a>
        <p> <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-twitter"></i>
+          <i className="fab fa-twitter fa-4x"></i>
         </a>
        </p>
        </p>

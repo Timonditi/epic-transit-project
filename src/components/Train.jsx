@@ -30,7 +30,13 @@ const EpicTransitForm = () => {
     <>
       <div className='head'> 
         <img src="https://www.brookings.edu/wp-content/uploads/2017/06/train_kenya001.jpg" alt="" />
-      </div>
+        </div>
+        
+        <div className="newtext-overlay">
+         <h2>Book your ticket and travel with us in style</h2>
+  </div>
+     
+
       <div className='form'>
       <form>
         <p>Book affordable buses and train</p>

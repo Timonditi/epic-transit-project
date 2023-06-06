@@ -82,14 +82,11 @@ h1 {
     background-color: #007bff;
     text-align: center;
   }
-  /* .about{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px; */
-  /* } */
+ 
   .about {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
   }
   
   .about > * {
@@ -103,6 +100,7 @@ h1 {
   
   .social-icons {
     margin-top: 20px;
+    
   }
   
   .social-icons a {
@@ -110,6 +108,7 @@ h1 {
     margin-right: 10px;
     font-size: 59px;
     transition: color 0.3s ease-in-out;
+    
   }
   
   .social-icons a:hover {
@@ -262,3 +261,41 @@ h1 {
   color:black;
   font-size: 24px;
 }
+.newtext-overlay {
+  position: absolute;
+  left: 50%;
+  /* bottom:40%; */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /* padding: 10px; */
+  color:black;
+  font-size: 20px;
+}
+
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.imageContainer img {
+  width: 30%;
+  margin-right: 10px;
+}
+
+.imagecont {
+  display: flex;
+  align-items:normal;
+  margin-bottom: 10px;
+  margin-left: -8px;
+  margin-right: -25px;
+}
+
+.imagecont img {
+  width: 650px;
+  height: 220px;
+  margin-right: 10px;
+}
+
