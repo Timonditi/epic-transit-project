@@ -58,7 +58,7 @@ function CustomerReviews() {
   };
 
   return (
-    <div className='form'>
+    <div className='form1'>
       <h2>Customer Reviews</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -83,6 +83,7 @@ function CustomerReviews() {
           <label htmlFor="review">Review:</label>
           <textarea
             id="review"
+            type="review"
             value={review}
             onChange={handleReviewChange}
           />

@@ -39,7 +39,7 @@ const EpicTransitForm1 = () => {
        
         <div className='form'> 
           <form>
-            <p><h3>Book affordable buses and trains</h3></p>
+            <p><h3>Book affordable buses</h3></p>
             <div>
               <label>
                 From:

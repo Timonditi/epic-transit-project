@@ -44,7 +44,7 @@ const EpicTransitForm = ({data}) => {
 
       <div className='form'>
       <form>
-        <p>Book affordable buses and train</p>
+        <p>Book affordable train</p>
         <label>
           From:
           <input type="text" value={from} onChange={handleFromChange} />
