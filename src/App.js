@@ -9,30 +9,37 @@ import Bus from './components/Bus';
 import HomePage from './components/HomePage';
 import CustomerDetails from './components/CustomersDetails';
 import SearchResults from './components/SearchResults';
+import BusSearchResults from './components/BusSearchResult';
 
 const App = () => {
-  const[data, setData] =  useState([]) 
-   const [searchResults, setSearchResults] = useState([]);
-   const location = useLocation();
-  console.log(data);
+   const [busData, setBusData] = useState([]);
+  const [trainData, setTrainData] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const location = useLocation();
+  console.log(busData);
+  console.log(trainData);
 
-// fetching data
-useEffect(() => {
-  fetch("http://localhost:9292/buses")
-  .then((r) => r.json())
-  .then ((data) => setData(data))
-}, [])
+  // fetching data
+  useEffect(() => {
+    Promise.all([
+      fetch("http://localhost:9292/buses").then((r) => r.json()),
+      fetch("http://localhost:9292/trains").then((r) => r.json())
+    ]).then(([busData, trainData]) => {
+      setBusData(busData);
+      setTrainData(trainData);
+    });
+  }, []);
 
   return (
       <>
         <Navbar />
         <HomePage />
         <Routes>  
-          <Route path='/' element={<Bus />}/>
-          <Route path="/booking" element={< EpicTransitForm data={data} />} />
+          <Route path='/' element={<Bus busData={busData}/>}/>
+          <Route path="/booking" element={< EpicTransitForm data={trainData} />} />
           <Route path="/customer-details" element={<CustomerDetails />} />
-           <Route path="/search-results" element={<SearchResults data={data}/>} />
-          <Route path="/booking" element={< EpicTransitForm />} />
+           <Route path="/search-results" element={<SearchResults data={trainData}/>} />
+                      <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
           <Route path='/CustomerReviews' element={< CustomerReviews />}/>
         </Routes>
         <Footer />

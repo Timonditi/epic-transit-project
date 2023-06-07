@@ -1,17 +1,15 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import Fuse from 'fuse.js';
 
-const SearchResults = ({ data }) => {
+const BusSearchResults = ({ busData }) => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const from = queryParams.get('from');
   const to = queryParams.get('to');
   const navigate = useNavigate()
 
-
-  console.log(data)
   // Set up the Fuse instance with the appropriate options
-  const fuse = new Fuse(data, {
+  const fuse = new Fuse(busData, {
     keys: ['departure_city', 'destination_city'],
     includeScore: true,
   });
@@ -31,7 +29,7 @@ const SearchResults = ({ data }) => {
         <div key={result.id} className='search-result-card'>
   {/* Render the search result data */}
   <p>
-    <span className="left-content">Train Number: {result.train_number}</span>
+    <span className="left-content">Bus Number: {result.bus_number}</span>
     </p>
     <p>
     <span className="left-content" style={{fontSize:"larger"}}>
@@ -54,4 +52,4 @@ const SearchResults = ({ data }) => {
   );
 };
 
-export default SearchResults;
+export default BusSearchResults;
