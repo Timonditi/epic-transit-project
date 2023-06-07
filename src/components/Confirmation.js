@@ -8,8 +8,11 @@ function TicketConfirmation() {
         <h1>
           <b>BOOKING SUCCESSFUL</b>
         </h1>
-        <FontAwesomeIcon icon={faCheckCircle} size="4x" color="green" />
-      </div>
+
+        <div className="icon">
+    <FontAwesomeIcon icon={faCheckCircle} size="4x" color="green" />
+  </div>
+</div>
     );
   }
   

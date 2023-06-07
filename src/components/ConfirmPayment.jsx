@@ -25,13 +25,14 @@ function PaymentConfirmation() {
   };
 
   return (
-    <div>
-      <h2>Payment Confirmation</h2>
+    <div className='details'>
+      <h2>Details Confirmation</h2>
       <p>First Name: {customer.firstName}</p>
       <p>Last Name: {customer.lastName}</p>
       <p>Phone Number: {customer.phoneNumber}</p>
       <p>ID/Passport: {customer.idPassport}</p>
-
+      
+    <div className="payment-options">
       <h3>Mode of Payment</h3>
       <div>
         <label>
@@ -43,6 +44,7 @@ function PaymentConfirmation() {
           />
           M-Pesa
         </label>
+      </div>
       </div>
       <div>
         <label>
@@ -56,14 +58,16 @@ function PaymentConfirmation() {
         </label>
       </div>
 
-      <button onClick={handlePreviousPage}>
-        <Link to="/customer-details">Edit</Link>
-      </button>
-      <button onClick={handleNextPage}>
-        <Link to="/TicketConfirmation">Confirm</Link>
-      </button>
-    </div>
-  );
+      <div className="button-container">
+    <button onClick={handlePreviousPage}>
+      <Link to="/customer-details">Edit</Link>
+    </button>
+    <button onClick={handleNextPage}>
+      <Link to="/TicketConfirmation">Confirm</Link>
+    </button>
+  </div>
+</div>
+);
 }
 
 export default PaymentConfirmation;
