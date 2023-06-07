@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const EpicTransitForm = () => {
+
+const EpicTransitForm = ({data}) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [date, setDate] = useState('');
+    const navigate = useNavigate();
+
   
     const handleFromChange = (e) => {
       setFrom(e.target.value);
@@ -16,15 +21,15 @@ const EpicTransitForm = () => {
     const handleDateChange = (e) => {
       setDate(e.target.value);
     };
-  
-    const handleSearch = (e) => {
-      e.preventDefault();
-      // Perform search or other actions here
-      console.log('Search clicked!');
-      console.log('From:', from);
-      console.log('To:', to);
-      console.log('Date:', date);
-    };
+
+  const handleSearch = (e) => {
+  e.preventDefault();
+
+  const queryParams = `?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`;
+
+    navigate(`/search-results${queryParams}`);
+    console.log(queryParams)
+};
   
   return (
     <>

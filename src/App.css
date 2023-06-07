@@ -299,3 +299,37 @@ h1 {
   height: 220px;
   margin-right: 10px;
 }
+.search-result-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+    .search-result-card p {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+.left-content {
+  float: left;
+  text-align: left;
+}
+
+.right-content {
+  float: right;
+  text-align: right;
+}
+
+#fare {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.search-result-card button {
+  border-radius: 5px;
+  margin-top: 10px;
+}
