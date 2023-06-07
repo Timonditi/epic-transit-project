@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
+function CustomerDetails({busData,trainData}) {
 
-function CustomerDetails() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [idPassport, setIdPassport] = useState('');
-
   const navigate = useNavigate();
+  const location = useLocation();
+
+  console.log(location.pathname); // Retrieves the current path
+  console.log(location.search.split('').slice(4).join('')); // Retrieves the query string
+ const id = location.search.split('').slice(4).join('')
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -28,12 +33,10 @@ function CustomerDetails() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Perform any necessary actions with the customer data
     // (e.g., submit to backend, validate, etc.)
-
     // Navigate to a new route and pass customer details as URL parameters
-    navigate(`/payment-confirmation?firstName=${firstName}&lastName=${lastName}&phoneNumber=${phoneNumber}&idPassport=${idPassport}`);
+    navigate(`/payment-confirmation?Id=${id}&firstName=${firstName}&lastName=${lastName}&phoneNumber=${phoneNumber}&idPassport=${idPassport}`);
   };
 
   return (

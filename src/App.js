@@ -37,7 +37,7 @@ const App = () => {
         <Routes>  
           <Route path='/' element={<Bus busData={busData}/>}/>
           <Route path="/booking" element={< EpicTransitForm data={trainData} />} />
-          <Route path="/customer-details" element={<CustomerDetails />} />
+          <Route path="/customer-details" element={<CustomerDetails busData={busData} trainData={trainData} />} />
            <Route path="/search-results" element={<SearchResults data={trainData}/>} />
                       <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
           <Route path='/CustomerReviews' element={< CustomerReviews />}/>
