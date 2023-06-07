@@ -58,7 +58,7 @@ function CustomerReviews() {
   };
 
   return (
-    <div>
+    <div className='form'>
       <h2>Customer Reviews</h2>
       <form onSubmit={handleSubmit}>
         <div>
