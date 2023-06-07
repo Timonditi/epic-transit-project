@@ -30,7 +30,7 @@ const BusForm = () => {
     return (
      <>
         <div className='header'>
-          <img src="https://lh3.googleusercontent.com/xh4AQGRJousi2VKiziju9pRvBkFASMloocZBSuvY8bhP6guqLOeR7tFVOdfgBLxjNmNxnPHGdBmoXchc6aqvzXOYGllX43ccc1cz8PTCng=s1200" alt="" />
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/0f/12/6e/ragati-conservancy-mt.jpg?w=1200&h=-1&s=1" alt="" />
           <div className="text-overlay">
          <h2>Discover the beauty of Kenya and make great memories with us</h2>
   </div>
