@@ -17,10 +17,11 @@ const BusSearchResults = ({ busData }) => {
   // Perform the fuzzy search based on the 'from' and 'to' values
   const fuzzyResults = fuse.search(`${from} ${to}`).map((result) => result.item);
 
-  const handleClick = (e) => {
-      e.preventDefault();
-    navigate(`/customer-details`);
-    };
+  const handleClick = (result) => (e) => {
+    e.preventDefault();
+    navigate(`/customer-details?Id=${result.bus_number}`);
+  };
+
 
   return (
     <div>
@@ -45,7 +46,7 @@ const BusSearchResults = ({ busData }) => {
     <span className="left-content">Available Seats: {result.available_seats}</span>
     <span id="fare"   className="right-content">Fare: {result.fare}</span>
   </p>
-  <button onClick={handleClick}>Book Now</button>
+  <button onClick={handleClick(result)}>Book Now</button>
 </div>
       ))}
     </div>

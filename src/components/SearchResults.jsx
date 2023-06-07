@@ -8,8 +8,6 @@ const SearchResults = ({ data }) => {
   const to = queryParams.get('to');
   const navigate = useNavigate()
 
-
-  console.log(data)
   // Set up the Fuse instance with the appropriate options
   const fuse = new Fuse(data, {
     keys: ['departure_city', 'destination_city'],
@@ -19,10 +17,10 @@ const SearchResults = ({ data }) => {
   // Perform the fuzzy search based on the 'from' and 'to' values
   const fuzzyResults = fuse.search(`${from} ${to}`).map((result) => result.item);
 
-  const handleClick = (e) => {
-      e.preventDefault();
-    navigate(`/customer-details`);
-    };
+  const handleClick = (result) => (e) => {
+    e.preventDefault();
+    navigate(`/customer-details?Id=${result.train_number}`);
+  };
 
   return (
     <div>
@@ -47,7 +45,7 @@ const SearchResults = ({ data }) => {
     <span className="left-content">Available Seats: {result.available_seats}</span>
     <span id="fare"   className="right-content">Fare: {result.fare}</span>
   </p>
-  <button onClick={handleClick}>Book Now</button>
+  <button onClick={handleClick(result)}>Book Now</button>
 </div>
       ))}
     </div>

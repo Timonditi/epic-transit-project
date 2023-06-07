@@ -11,6 +11,7 @@ import CustomerDetails from './components/CustomersDetails';
 import SearchResults from './components/SearchResults';
 import BusSearchResults from './components/BusSearchResult';
 import PaymentConfirmation from './components/ConfirmPayment'
+import TicketConfirmation from './components/Confirmation'
 
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
           <Route path='/CustomerReviews' element={< CustomerReviews />}/>
           <Route path='/payment-confirmation' element={<PaymentConfirmation />}/>
+          <Route path='/TicketConfirmation' element={<TicketConfirmation/>}/>
         </Routes>
         <Footer />
       </>

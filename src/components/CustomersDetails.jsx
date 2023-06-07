@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function CustomerDetails() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [idPassport, setIdPassport] = useState('');
-
   const navigate = useNavigate();
+  const location = useLocation();
+
+  console.log(location.pathname); // Retrieves the current path
+  console.log(location.search.split('').slice(4).join('')); // Retrieves the query string
+ const id = location.search.split('').slice(4).join('')
 
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
