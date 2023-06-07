@@ -208,9 +208,7 @@ h1 {
 }
 .form p {
   margin: 0;
-    /* Remove margin */
-    padding: 10px;
-    /* Added padding */
+   padding: 10px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
@@ -357,7 +355,8 @@ font-size: larger;
   }
   
   .form1 input[type="text"],
-  .form1 input[type="email"] {
+  .form1 input[type="email"],
+  .form1 input[type="review"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 5px;
@@ -368,7 +367,7 @@ font-size: larger;
   
   .form1 button {
     display: block;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     padding: 15px;
     background-color: #007bff;
     color: #fff;
@@ -376,25 +375,6 @@ font-size: larger;
     cursor: pointer;
     border-radius: 5px;
      
-  }
-  .form1 {
-    /* Form container styles */
-  }
-  
-  .form-input {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
   
   .form-button {
@@ -406,6 +386,26 @@ font-size: larger;
     cursor: pointer;
     border-radius: 5px;
   }
-  .review-content {
-   left: auto;
+ 
+  .form-submit-button {
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+  }
+  
+  .form1-delete-button {
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+  }
+  .remove-button {
+    font-size: 26px; 
+    padding: 10px 20px; 
+    width: 150;
   }

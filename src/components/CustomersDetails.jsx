@@ -76,7 +76,7 @@ function CustomerDetails() {
             onChange={handleIdPassportChange}
           />
         </div>
-        <button type="submit">Confirm Payment</button>
+        <button type="submit">Confirm Details</button>
       </form>
     </div>
   );
