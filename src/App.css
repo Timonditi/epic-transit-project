@@ -196,19 +196,19 @@ h1 {
 
 .form button {
   display: block;
-  margin: 0 auto;
-  padding: 10px;
+  /* margin: 0 auto; */
+  padding: 15px;
   background-color: #007bff;
   color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  
+  
 }
 .form p {
   margin: 0;
-    /* Remove margin */
-    padding: 10px;
-    /* Added padding */
+   padding: 10px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 10px;
@@ -220,6 +220,7 @@ h1 {
 
 .form button:hover {
   background-color: #0056b3;
+  
 }
 
 .about {
@@ -235,7 +236,10 @@ h1 {
   background-color:#929ca7 ;
   text-align: center;
   color:#000000;
-  font-style: calc();
+  font-style:inherit;
+  font-weight: 800 ;
+font-size: larger;
+
   
 }
 .imageContainer {
@@ -333,3 +337,75 @@ h1 {
   border-radius: 5px;
   margin-top: 10px;
 }
+
+
+  .form1 {
+    margin: 60px auto;
+    max-width: 700px;
+    padding: 0 20px;
+    background-color: #f4f4f4;    
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form1 label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    /* Added text color */
+  }
+  
+  .form1 input[type="text"],
+  .form1 input[type="email"],
+  .form1 input[type="review"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form1 button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+     
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+ 
+  .form-submit-button {
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+  }
+  
+  .form1-delete-button {
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+  }
+  .remove-button {
+    font-size: 26px; 
+    padding: 10px 20px; 
+    width: 150;
+  }

@@ -10,6 +10,8 @@ import HomePage from './components/HomePage';
 import CustomerDetails from './components/CustomersDetails';
 import SearchResults from './components/SearchResults';
 import BusSearchResults from './components/BusSearchResult';
+import PaymentConfirmation from './components/ConfirmPayment'
+
 
 const App = () => {
    const [busData, setBusData] = useState([]);
@@ -37,10 +39,11 @@ const App = () => {
         <Routes>  
           <Route path='/' element={<Bus busData={busData}/>}/>
           <Route path="/booking" element={< EpicTransitForm data={trainData} />} />
-          <Route path="/customer-details" element={<CustomerDetails busData={busData} trainData={trainData} />} />
-           <Route path="/search-results" element={<SearchResults data={trainData}/>} />
-                      <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
+          <Route path="/customer-details" element={<CustomerDetails />} />
+          <Route path="/search-results" element={<SearchResults data={trainData}/>} />
+          <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
           <Route path='/CustomerReviews' element={< CustomerReviews />}/>
+          <Route path='/payment-confirmation' element={<PaymentConfirmation />}/>
         </Routes>
         <Footer />
       </>
