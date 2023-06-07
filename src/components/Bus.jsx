@@ -24,7 +24,7 @@ const EpicTransitForm1 = () => {
 
   const queryParams = `?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}`;
 
-    navigate(`/search-results${queryParams}`);
+    navigate(`/bus-search-results${queryParams}`);
     console.log(queryParams)
     };
   
