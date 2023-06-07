@@ -101,7 +101,8 @@ function CustomerReviews() {
           {reviews.map((review, index) => (
             <li key={index}>
               <strong>{review.name}</strong> ({review.email}) - {review.review}
-              <button onClick={() => handleRemove(index)}>Remove</button>
+              <button className="delete" onClick={() => handleRemove(index)}>Remove</button>
+              
             </li>
           ))}
         </ul>

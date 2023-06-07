@@ -351,7 +351,8 @@ font-size: larger;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-    /* Added text color */
+    display: flex;
+    
   }
   
   .form1 input[type="text"],
@@ -396,16 +397,18 @@ font-size: larger;
     text-shadow: none;
   }
   
-  .form1-delete-button {
+   /* .form1-delete-button {
     background: #B9DFFF;
     color: #fff;
     border: 1px solid #eee;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #eee;
-    text-shadow: none;
-  }
-  .remove-button {
-    font-size: 26px; 
-    padding: 10px 20px; 
-    width: 150;
+    text-shadow: none; 
+   }  */
+  .delete{
+    font-size: 12px; 
+    padding: 15px 15px; 
+    width: 120px;
+    margin-top:0px;
+     
   }

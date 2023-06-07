@@ -58,7 +58,7 @@ function CustomerDetails() {
           <label htmlFor="idPassport">ID/Passport:</label>
           <input type="text" id="idPassport" value={idPassport} onChange={handleIdPassportChange} />
         </div>
-        <button type="submit">Confirm Payment</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
