@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 function CustomerDetails() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -38,7 +39,7 @@ function CustomerDetails() {
   return (
     <div>
       <h2>Customer Details</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='form'>
         <div>
           <label htmlFor="firstName">First Name:</label>
           <input
