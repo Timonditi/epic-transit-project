@@ -234,6 +234,9 @@ h1 {
 .homePage {
   background-color:#929ca7 ;
   text-align: center;
+  color:#000000;
+  font-style: calc();
+  
 }
 .imageContainer {
   display: flex;
