@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function CustomerDetails() {
@@ -26,60 +25,17 @@ function CustomerDetails() {
     setIdPassport(e.target.value);
   };
 
-  const handleCreateCustomer = async (customer) => {
-    try {
-      const response = await fetch('http://localhost:9292/customers', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(customer),
-      });
-
-      if (response.ok) {
-        const createdCustomer = await response.json();
-        console.log( createdCustomer);
-        // Perform any necessary actions with the created customer
-      } else {
-        console.error(response.status);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Fetch the existing data from the backend
-    try {
-      const response = await fetch('http://localhost:9292/customers');
-      if (response.ok) {
-        const customerData = await response.json();
-        console.log(customerData);
-        // Perform any necessary actions with the fetched data
+    const customer = {
+      firstName: firstName,
+      lastName: lastName,
+      phoneNumber: phoneNumber,
+      idPassport: idPassport,
+    };
 
-        // Create the customer object
-        const customer = {
-          firstName: firstName,
-          lastName: lastName,
-          phoneNumber: phoneNumber,
-          idPassport: idPassport,
-        };
-
-        // Call the POST request handler
-        await handleCreateCustomer(customer);
-
-        // Navigate to a new route and pass customer details as URL parameters
-        navigate(
-          `/payment-confirmation?firstName=${firstName}&lastName=${lastName}&phoneNumber=${phoneNumber}&idPassport=${idPassport}`
-        );
-      } else {
-        console.error(response.status);
-      }
-    } catch (error) {
-      console.error(error);
-    }
+    navigate('/payment-confirmation', { state: { customer: customer } });
   };
 
   return (
@@ -102,7 +58,7 @@ function CustomerDetails() {
           <label htmlFor="idPassport">ID/Passport:</label>
           <input type="text" id="idPassport" value={idPassport} onChange={handleIdPassportChange} />
         </div>
-        <button type="submit">Confirm Details</button>
+        <button type="submit">Confirm Payment</button>
       </form>
     </div>
   );
