@@ -1,7 +1,7 @@
 
 const BusCard = ({ bus }) => {
   return (
-    <div className="bus-card" style={{ display: 'flex' }}>
+    <div className="bus-card" style={{ display: 'flex'}}>
       <h3 style={{ marginRight: '20px',textAlign:'inherit' }}>Details</h3>
       <p style={{ marginRight: '20px' }}>Bus Number: {bus.bus_number}</p>
       <p style={{ marginRight: '20px' }}>Departure City: {bus.departure_city}</p>
