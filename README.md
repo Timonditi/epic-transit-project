@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# epic transit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# introduction
 
-## Available Scripts
+Epic Transit is an application that  provides an online ticket booking system that simplifies the customer needs. Customers can book bus/train tickets and pay online, saving a lot of time. 
 
-In the project directory, you can run:
+# draft
+This is the draft of the project `https://www.figma.com/file/P0yBAiqcKfByQyetpRuZk9/Travel-site-landing-page?type=design&node-id=0-1&t=KVi2XYMbFHxGIgLi-0`
 
-### `npm start`
+# built with
+-For the frontend of this project we have used the following: 
+   - CSS
+   - React
+-For the  backend we used:
+   - Sinatra
+   - Active Records
+   - sqlite3
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# setup
+The following github links will take you to the respective repositories of the project 
+ - frontend : `https://github.com/Timonditi/epic-transit-project`
+ - backend : `https://github.com/Michal379/phase-3-sinatra-react-project`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To start this application;
+   - run the backend server `rake server` on port `http://localhost:9292/customers` 
+   - `then npm start ` in the frontend's root directory
 
-### `npm test`
+   # features
+The application has the following features: 
+ 1. User friendly UI.
+ 2. Homepage with  bus details.
+ 3. Page with trains details.
+ 4. Forms to enable users to book their preffered mode of transport.
+ 5. Form to enable users to input their booking details/information.
+ 6. Payment mode where users can choose their preffered mode of payment.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ # MVP
+ Users are able to do the following:
+ 1. Search for availabe buses/trains
+ 2. Choose their preffered bus/train and destination
+ 3. Enter/edit their personal details
+ 4. Choose mode of payment 
+ 5. Book successfully
+ 6. Leave/delete their reviews
 
-### `npm run build`
+ # Limitations
+ The app is experiencing a few limitations such as: 
+  - The mode of payment is not functional at the moment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# For the backend;
+We created our own backend using Sinatra and Active Record. It has the following 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  # features
+It has four models :
+1. bus 
+2. train
+3. customer
+4. review
 
-### `npm run eject`
+- Each model has a corresponding table with appropriate columns and relationships.
+- You can check the relationships with the following ERD link: `https://drawsql.app/teams/michal-7/diagrams/epic-transit-erd`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  # authors
+  Daniel Juma
+  Michal Khakayi
+  Rukia Sharif
+  Timothy Odongo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
