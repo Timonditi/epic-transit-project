@@ -52,8 +52,8 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
       }),
     })
       .then((r) => r.json())
-      .then((newCustomer) => onAddCustomer(newCustomer));
-
+      .then((newCustomer) => onAddCustomer(newCustomer))
+      .catch(error => console.log(error,error))
     const customer = {
       firstName: firstName,
       lastName: lastName,
