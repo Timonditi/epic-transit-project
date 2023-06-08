@@ -505,7 +505,15 @@ font-size: larger;
   .bus-card p {
     margin-right: 20px;
   }
- 
+  .navbar-item.active .navbar-link {
+    color:#000000;
+  }
+  
+  
+  
+  
+  
+  
   
   
   
