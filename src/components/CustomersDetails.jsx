@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import BusCard from './BusCard';
+import TrainCard from './Traincard';
 
 function CustomerDetails({busData,trainData,onAddCustomer}) {
   const [firstName, setFirstName] = useState('');
@@ -15,9 +16,11 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
    const numString = String(id);
    const hasTwoDigits = /^0*[0-9]{2}$/.test(numString);
    const hasThreeDigits = /^0*[0-9]{3}$/.test(numString);
-  const filteredResult = hasTwoDigits || hasThreeDigits ? busData.find(bus => {
-    return parseInt(bus.bus_number) === parseInt(id);
-  }) : null;
+  const filteredResult = hasTwoDigits
+    ? busData.find((bus) => parseInt(bus.bus_number) === parseInt(id))
+    : hasThreeDigits
+    ? trainData.find((train) => parseInt(train.train_number) === parseInt(id))
+    : null;
   console.log(id)
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
@@ -43,17 +46,17 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-       first_name: firstName,
+      first_name: firstName,
       last_name: lastName,
       passport: idPassport,
-      phone_number:phoneNumber,
-      mode_of_payment:'',
-      departure_info:id
-      }),
-    })
+      phone_number: phoneNumber,
+      mode_of_payment: '',
+      departure_info: id,
+  })
+})
       .then((r) => r.json())
       .then((newCustomer) => onAddCustomer(newCustomer))
-      .catch(error => console.log(error,error))
+      .catch(error => console.log(error))
     const customer = {
       firstName: firstName,
       lastName: lastName,
@@ -67,7 +70,11 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
   return (
     <div>
       <h2>Customer Details</h2>
-      <p>{filteredResult && <BusCard bus={filteredResult} />}</p>
+      <p> {filteredResult && hasTwoDigits ? (
+        <BusCard bus={filteredResult} />
+      ) : filteredResult && hasThreeDigits ? (
+        <TrainCard train={filteredResult} />
+      ) : null}</p>
       <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="firstName">First Name:</label>
