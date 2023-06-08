@@ -1,19 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import BusCard from './BusCard';
 
-function CustomerDetails() {
+function CustomerDetails({busData,trainData,onAddCustomer}) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [idPassport, setIdPassport] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-
-  console.log(location.pathname); // Retrieves the current path
-  console.log(location.search.split('').slice(4).join('')); // Retrieves the query string
- const id = location.search.split('').slice(4).join('')
-
+  const id = location.search.split('').slice(4).join('')
+  // handle digit comparison logic
+   const numString = String(id);
+   const hasTwoDigits = /^0*[0-9]{2}$/.test(numString);
+   const hasThreeDigits = /^0*[0-9]{3}$/.test(numString);
+  const filteredResult = hasTwoDigits || hasThreeDigits ? busData.find(bus => {
+    return parseInt(bus.bus_number) === parseInt(id);
+  }) : null;
+  console.log(id)
   const handleFirstNameChange = (e) => {
     setFirstName(e.target.value);
   };
@@ -32,6 +37,22 @@ function CustomerDetails() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    fetch("http://localhost:9292/customers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+       first_name: firstName,
+      last_name: lastName,
+      passport: idPassport,
+      phone_number:phoneNumber,
+      mode_of_payment:'',
+      departure_info:id
+      }),
+    })
+      .then((r) => r.json())
+      .then((newCustomer) => onAddCustomer(newCustomer));
 
     const customer = {
       firstName: firstName,
@@ -46,6 +67,7 @@ function CustomerDetails() {
   return (
     <div>
       <h2>Customer Details</h2>
+      <p>{filteredResult && <BusCard bus={filteredResult} />}</p>
       <form onSubmit={handleSubmit} className="form">
         <div>
           <label htmlFor="firstName">First Name:</label>

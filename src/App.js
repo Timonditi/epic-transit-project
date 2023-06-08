@@ -16,6 +16,7 @@ import PaymentConfirmation from './components/ConfirmPayment'
 const App = () => {
    const [busData, setBusData] = useState([]);
   const [trainData, setTrainData] = useState([]);
+  const [customer,setCustomer] = useState([])
   const [searchResults, setSearchResults] = useState([]);
   const location = useLocation();
   console.log(busData);
@@ -25,12 +26,17 @@ const App = () => {
   useEffect(() => {
     Promise.all([
       fetch("http://localhost:9292/buses").then((r) => r.json()),
-      fetch("http://localhost:9292/trains").then((r) => r.json())
-    ]).then(([busData, trainData]) => {
+      fetch("http://localhost:9292/trains").then((r) => r.json()),
+      fetch("http://localhost:9292/customers").then((r) => r.json())
+    ]).then(([busData, trainData,customer]) => {
       setBusData(busData);
       setTrainData(trainData);
+      setCustomer(customer);
     });
   }, []);
+  function handleAddCustomer(newCustomer) {
+    setCustomer([...customer, newCustomer]);
+  }
 
   return (
       <>
@@ -39,7 +45,7 @@ const App = () => {
         <Routes>  
           <Route path='/' element={<Bus busData={busData}/>}/>
           <Route path="/booking" element={< EpicTransitForm data={trainData} />} />
-          <Route path="/customer-details" element={<CustomerDetails />} />
+          <Route path="/customer-details" element={<CustomerDetails busData={busData} trainData={trainData} onAddCustomer={handleAddCustomer}/>} />
           <Route path="/search-results" element={<SearchResults data={trainData}/>} />
           <Route path="/bus-search-results" element={<BusSearchResults busData={busData}/>} />
           <Route path='/CustomerReviews' element={< CustomerReviews />}/>
