@@ -16,6 +16,7 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
    const numString = String(id);
    const hasTwoDigits = /^0*[0-9]{2}$/.test(numString);
    const hasThreeDigits = /^0*[0-9]{3}$/.test(numString);
+   const busNumber = hasTwoDigits ? `bus_number ${id}`: `train_number ${id}`
   const filteredResult = hasTwoDigits
     ? busData.find((bus) => parseInt(bus.bus_number) === parseInt(id))
     : hasThreeDigits
@@ -51,7 +52,7 @@ function CustomerDetails({busData,trainData,onAddCustomer}) {
       passport: idPassport,
       phone_number: phoneNumber,
       mode_of_payment: '',
-      departure_info: id,
+      departure_info: busNumber,
   })
 })
       .then((r) => r.json())
