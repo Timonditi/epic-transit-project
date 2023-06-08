@@ -351,7 +351,8 @@ font-size: larger;
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-    /* Added text color */
+    display: flex;
+    
   }
   
   .form1 input[type="text"],
@@ -396,16 +397,86 @@ font-size: larger;
     text-shadow: none;
   }
   
-  .form1-delete-button {
+   /* .form1-delete-button {
     background: #B9DFFF;
     color: #fff;
     border: 1px solid #eee;
     border-radius: 20px;
     box-shadow: 5px 5px 5px #eee;
-    text-shadow: none;
+    text-shadow: none; 
+   }  */
+  .delete{
+    font-size: 12px; 
+    padding: 15px 15px; 
+    width: 120px;
+    margin-top:0px;
+     
   }
-  .remove-button {
-    font-size: 26px; 
-    padding: 10px 20px; 
-    width: 150;
+  .details {
+    text-align: center;
+  }
+  
+  .details h2 {
+    margin-bottom: 20px;
+  }
+  
+  .details p {
+    margin-bottom: 10px;
+  }
+  
+  .details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .details label {
+    display: block;
+    font-weight: 300;
+  }
+  
+  .details input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .details button {
+    display: inline-block;
+    margin-top: 5%;
+    margin-right: 30px;
+    padding: 15px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  
+  }
+  
+  .details button:hover {
+    background-color: #0056b3;
+  }
+  .details .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .button-container{
+    font-size: larger;
+    font-weight: 500;
+  }
+  .confirmation{
+    font-weight: 400;
+    color: #007bff;
+    text-align: center;
+    
+  }
+ 
+  .confirmation h1 {
+    margin-bottom: 20px;
+  }
+  
+  .confirmation .icon {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
   }
